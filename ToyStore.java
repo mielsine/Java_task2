@@ -10,7 +10,7 @@ public class ToyStore {
     public ToyStore() {
         toys = new ArrayList<Toy>();
         prizeToys = new ArrayList<Toy>();
-        prizeFilePath = "prize_toys.txt";
+        prizeFilePath = "won_toys.txt";
     }
 
     public void addToy(Toy toy) {
@@ -45,7 +45,7 @@ public class ToyStore {
                 writer.write(prizeToy.getName() + "\n");
                 writer.close();
             } catch (IOException e) {
-                System.out.println("Ошибка при записи в файл игрушки");
+                System.out.println("При записи в файл возникла ошибка");
             }
 
             return prizeToy;
